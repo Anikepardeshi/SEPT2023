@@ -11,6 +11,7 @@ import java.util.Arrays;
 		System.out.println ( removeElement(nums,val));
 
 	}
+	/*
 	static int removeElement(int nums[], int val)
 	{
 		
@@ -28,3 +29,69 @@ import java.util.Arrays;
 	
 
 }
+*/
+	
+	
+    static int removeElement(int[] nums, int val) {
+        int end = nums.length-1;
+        int start =0;
+        while (start <= end)
+        {
+            if (nums[end]==val)
+            {
+                end--;
+            }
+            else 
+            {
+                if (nums[start]==val)
+                {
+                    int temp = nums[end];
+                    nums[end]= nums[start];
+                    nums[start]= temp;
+                    end--;
+                }
+                else
+                {
+                    start++;
+                }
+            }
+        }
+        return end+1;
+    }
+}
+	
+	
+	
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
